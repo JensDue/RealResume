@@ -1,16 +1,20 @@
 {resume
 	{id,name,email,
-    educations {id, name, school},    
-    companies {id, name, headquarters},    
-    projects {id, name},    
-    skills {id, name, level},    
+    educations {id, name, school, timestamp},    
+    companies {id, name, headquarters, timestamp},    
+    projects {id, name, description, timestamp},    
+    skills {id, name, level, timestamp},    
   }
 ,companies {id, name}
 ,educations {id, name}
 ,projects {id, name}
 ,skills {id, name}
-,company(id: "0") {id, name}
-,education(id: "0") {id, name}
-,project(id: "0") {id, name}
-,skill(id: "0") {id, name}
+,company(id: 0) 
+  {id, name, description, headquarters, id, industry, name, timestamp, website}
+,education(id: 0) 
+  {degree, endDate, id, name, school, startDate, timestamp}
+,project(id: 0) 
+  {description, endDate, id, location, name, startDate, timestamp}
+,skill(id: 0) 
+  {id, level, name, timestamp}
 }

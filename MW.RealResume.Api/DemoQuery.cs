@@ -12,31 +12,31 @@ namespace MW.RealResume.Api
             Name = "Query";
 
             Field<CompanyType>("company", arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>>
+                    new QueryArgument<NonNullGraphType<IntGraphType>>
                         {Name = "id", Description = "id"}
                 ),
-                resolve: context => data.GetCompanyByIdAsync(context.GetArgument<string>("id"))
+                resolve: context => data.GetCompanyByIdAsync(context.GetArgument<int>("id"))
             );
 
             Field<ProjectType>("project", arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>>
+                    new QueryArgument<NonNullGraphType<IntGraphType>>
                         {Name = "id", Description = "id of the project"}
                 ),
-                resolve: context => data.GetProjectByIdAsync(context.GetArgument<string>("id"))
+                resolve: context => data.GetProjectByIdAsync(context.GetArgument<int>("id"))
             );
 
             Field<EducationType>("education", arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>>
+                    new QueryArgument<NonNullGraphType<IntGraphType>>
                         {Name = "id", Description = "id of the education"}
                 ),
-                resolve: context => data.GetEducationByIdAsync(context.GetArgument<string>("id"))
+                resolve: context => data.GetEducationByIdAsync(context.GetArgument<int>("id"))
             );
 
             Field<SkillType>("skill", arguments: new QueryArguments(
-                    new QueryArgument<NonNullGraphType<StringGraphType>>
+                    new QueryArgument<NonNullGraphType<IntGraphType>>
                         {Name = "id", Description = "id of the skill"}
                 ),
-                resolve: context => data.GetSkillByIdAsync(context.GetArgument<string>("id"))
+                resolve: context => data.GetSkillByIdAsync(context.GetArgument<int>("id"))
             );
 
             Field<ResumeType>("resume", resolve: context => data.GetResume());

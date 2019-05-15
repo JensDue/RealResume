@@ -2,22 +2,24 @@ Todo:
 Add unit test (just to show how is is done)
 Add Interface to the DataAccess layer
 Add some better data
-Move the style into a style sheet
 Add better documentation to the schema
-Changes to Id property from string to int
 Education is an uncountable noun and should not be called 'Educations'
 Add unit test that tests the schema
 Add integration test
 Why do we have InterfaceGraphType? Documentation?
 Add a short solution description document
 Move dependency injection to relevant layer
+GitHub has found potential security vulnerabilities in old dependencies
 
 Todo before next checkin:
-Add to GitHub
 
 In Progress:
-Make sure all properties are exposed in the schema
 
+Completed in this sprint:
+Changes to Id property from string to int
+Move the style into a style sheet
+Make sure all properties are exposed in the schema
+Add to GitHub
 
 Complete:
 Create a small default page

@@ -14,7 +14,7 @@ namespace MW.RealResume.DataAccess
             {
                 new Skill
                 {
-                    Id = "0",
+                    Id = 0,
                     Name = "Software Development",
                     Timestamp = new DateTime(2019, 4, 1, 11, 55, 02),
                     Level = "High"
@@ -22,7 +22,7 @@ namespace MW.RealResume.DataAccess
 
                 new Skill
                 {
-                    Id = "1",
+                    Id = 1,
                     Name = "Retrospective Facilitator",
                     Timestamp = new DateTime(2019, 4, 1, 11, 55, 05),
                     Level = "Not so high"
@@ -30,7 +30,7 @@ namespace MW.RealResume.DataAccess
 
                 new Skill
                 {
-                    Id = "2",
+                    Id = 2,
                     Name = "Baking and eating cake",
                     Timestamp = new DateTime(2019, 4, 1, 11, 55, 07),
                     Level = "Expert"

@@ -24,7 +24,7 @@ namespace MW.RealResume.DataAccess
             _companies.Add(
                 new Company
                 {
-                    Id = "0",
+                    Id = 0,
                     Name = "KMD",
                     Timestamp = new DateTime(2019, 4, 1, 11, 55, 00),                        
                     Industry = "Information technology", //TODO: Implement as Enum
@@ -37,11 +37,11 @@ namespace MW.RealResume.DataAccess
             _educations.Add(
                 new Education
                 {
-                    Id = "0",
+                    Id = 0,
                     Name = "Mat/Fys Student",
                     Timestamp = new DateTime(2019, 4, 1, 11, 55, 01),
                     School = "Åbenrå Gymnasium",
-                    Degree = "Student",
+                    Degree = "Student",                    
                     StartDate = new DateTime(1993, 8, 1),
                     EndDate = new DateTime(1995, 7, 1),
                 }
@@ -51,33 +51,32 @@ namespace MW.RealResume.DataAccess
             _projects.Add(
                 new Project
                 {
-                    Id = "0",
-                    Name = "Bl.a.",
-                    Timestamp = new DateTime(2019, 4, 1, 11, 55, 02),                                      
+                    Id = 0,
+                    Name = "Rave Booking System",
+                    Timestamp = new DateTime(2019, 4, 1, 11, 55, 02),
+                    Description = "This a short description of the project",
+                    Location = "Berlin",
+                    StartDate = new DateTime(2015, 4, 1, 11, 55, 02),
+                    EndDate = new DateTime(2019, 4, 1, 11, 55, 02),
                 }
             );
 
             _projects.Add(
                 new Project
                 {
-                    Id = "1",
-                    Name = "KJsjdfh kjsh fkjhsfkj hskjf hskdhf ks hfd",
+                    Id = 1,
+                    Name = "Deal Capture System",
                     Timestamp = new DateTime(2019, 4, 2, 11, 55, 05),
-                }
-            );
-
-            _projects.Add(
-                new Project
-                {
-                    Id = "2",
-                    Name = "Isdkfj. Khkjfdhwehfkjhf sdkfj: Jen sfh kj",
-                    Timestamp = new DateTime(2019, 4, 3, 11, 55, 08),
+                    Description = "This a short description of the project",
+                    Location = "London",
+                    StartDate = new DateTime(2010, 4, 1, 11, 55, 02),
+                    EndDate = new DateTime(2015, 4, 1, 11, 55, 02),
                 }
             );
 
             _resume = new Resume
             {
-                Id = "101",
+                Id = 101,
                 Name = "Jens Tue Bolsen",
                 Timestamp = new DateTime(2019, 4, 3, 11, 55, 08),
                 Email = "tue.bolsen@gmail.com",
@@ -88,7 +87,7 @@ namespace MW.RealResume.DataAccess
             };
         }
     
-        public Task<Company> GetCompanyByIdAsync(string id)
+        public Task<Company> GetCompanyByIdAsync(int id)
         {
             return Task.FromResult(_companies.FirstOrDefault(h => h.Id == id));
         }
@@ -98,7 +97,7 @@ namespace MW.RealResume.DataAccess
             return _companies.AsEnumerable();
         }
 
-        public Task<Education> GetEducationByIdAsync(string id)
+        public Task<Education> GetEducationByIdAsync(int id)
         {
             return Task.FromResult(_educations.FirstOrDefault(h => h.Id == id));
         }
@@ -113,7 +112,7 @@ namespace MW.RealResume.DataAccess
             return _projects.AsEnumerable();
         }
 
-        public Task<Project> GetProjectByIdAsync(string id)
+        public Task<Project> GetProjectByIdAsync(int id)
         {
             return Task.FromResult(_projects.FirstOrDefault(h => h.Id == id));
         }
@@ -128,7 +127,7 @@ namespace MW.RealResume.DataAccess
             return _staticData.Skills.AsEnumerable();
         }
 
-        public Skill GetSkillByIdAsync(string id)
+        public Skill GetSkillByIdAsync(int id)
         {
             return _staticData.Skills.FirstOrDefault(h => h.Id == id);
         }
