@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <TargetFrameworks>netstandard2.0;net45</TargetFrameworks>
+    <AssemblyName>MW.RealResume.Api</AssemblyName>
+    <PackageId>GraphQL.StarWars</PackageId>
+    <RootNamespace>MW.RealResume.Api</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="2.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MW.RealResume.Common\MW.RealResume.Common.csproj" />
+    <ProjectReference Include="..\MW.RealResume.DataAccess\MW.RealResume.DataAccess.csproj" />
+    <ProjectReference Include="..\MW.RealResume.Model\MW.RealResume.Model.csproj" />
+  </ItemGroup>
+
+</Project>

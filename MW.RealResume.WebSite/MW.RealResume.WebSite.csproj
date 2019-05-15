@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+    <StartupObject></StartupObject>
+    <UserSecretsId>a3aeefac-a13a-4a9a-bd41-a733dd48aaa7</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GraphQL" Version="2.4.0" />
+    <PackageReference Include="GraphQL.Authorization" Version="2.1.29" />
+    <PackageReference Include="GraphQL.Server.Transports.AspNetCore" Version="3.4.0" />
+    <PackageReference Include="GraphQL.Server.Ui.Playground" Version="3.4.0" />
+    <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="2.0.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MW.RealResume.Api\MW.RealResume.Api.csproj" />
+    <ProjectReference Include="..\MW.RealResume.Common\MW.RealResume.Common.csproj" />
+    <ProjectReference Include="..\MW.RealResume.Model\MW.RealResume.Model.csproj" />
+  </ItemGroup>
+</Project>
